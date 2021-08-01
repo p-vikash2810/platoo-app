@@ -1,0 +1,16 @@
+.slider {
+    width: 36vw;
+    padding-left: 20px;
+
+}
+.slider:last-child button {
+    right: 0;
+}
+
+@media screen and (max-width: 790px) {
+    .slider {
+        width: 290px;
+        height: 130px;
+        padding-left: 5px;
+    }
+}

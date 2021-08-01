@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./globalStyle";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Photobooth from "./pages/Photobooth/Photobooth"
+import TikTakToe from "./pages/TikTakToe/TikTakToe";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <GlobalStyle />
+    <Switch>
+      <Route path="/" exact component={TikTakToe} />
+      <Route path="/TikTakToe" exact component={Photobooth} />
+    </Switch>
+    {/* <Footer /> */}
+  </Router>
   );
 }
 
